@@ -15,7 +15,6 @@ export const scrapIds = (data) => {
   const exp = new RegExp("[0-9]+");
   return data?.map((obj) => {
     const id = Number(obj.url.match(exp)[0]);
-    console.log(id);
     return { id, ...obj };
   });
 };

@@ -11,6 +11,10 @@ export class BaseApi {
       const response = await fetch(
         `${this.baseUrl}/${this.resource}?page=${pageNumber}`
       );
+      if (!response.ok) {
+        this.handleHttpErrors(response.status);
+        return;
+      }
       return await response.json();
     } catch (err) {
       this.handleErrors(err);
@@ -21,6 +25,10 @@ export class BaseApi {
     try {
       if (!id) throw Error("id is not provided");
       const response = await fetch(`${this.baseUrl}/${this.resource}/${id}`);
+      if (!response.ok) {
+        this.handleHttpErrors(response.status);
+        return;
+      }
       return await response.json();
     } catch (err) {
       this.handleErrors(err);
@@ -34,6 +42,20 @@ export class BaseApi {
   }
 
   handleErrors(err) {
-    alert("Error occured:", err);
+    console.log("err", err);
+    alert(`Error occured: ${err}`);
+  }
+
+  handleHttpErrors(status) {
+    let page;
+    switch (status) {
+      case 404:
+        page = "/not-found";
+        break;
+      default:
+        page = "/server-error";
+        break;
+    }
+    window.location.assign(page);
   }
 }

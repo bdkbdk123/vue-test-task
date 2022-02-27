@@ -16,6 +16,16 @@ const router = createRouter({
         person: { ...route.params },
       }),
     },
+    {
+      path: "/not-found",
+      name: "not-found",
+      component: () => import("@/views/errors/NotFoundView.vue"),
+    },
+    {
+      path: "/server-error",
+      name: "server-error",
+      component: () => import("@/views/errors/ServerErrorView.vue"),
+    },
   ],
 });
 
