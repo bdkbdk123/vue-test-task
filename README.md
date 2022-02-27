@@ -1,8 +1,9 @@
 # Vue Swapi test task
-Vue 3, Composition API
+- Vue 3
+- Composition API
 
 ## Configure (optional)
-Open `config.js` to change config values
+Open `src/config.js` to change config values
 
 ## Run
 
