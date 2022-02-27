@@ -45,14 +45,14 @@ const props = defineProps({
 }
 
 .people-table tbody tr {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid white;
 }
 
 .people-table tbody tr:nth-of-type(even) {
-  background-color: #f3f3f3;
+  background-color: whitesmoke;
 }
 
 .people-table tbody tr:last-of-type {
-  border-bottom: 2px solid #009879;
+  border-bottom: 2px solid black;
 }
 </style>
