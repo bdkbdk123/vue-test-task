@@ -20,3 +20,16 @@ npm install
 ```sh
 npm run dev
 ```
+
+## Specification
+```
+Set up a Vue.js SPA instance on the 'home' page querying https://swapi.dev/, downloading and then displaying 80 people or more, where if you come across a person whose name starts with L, N, C then you discard them. Also, with each person, the color of the font (name and surname) is to match the color of their eyes. 
+
+Next to each person create a button leading to subpage '/edit' where the form will be filled with the person's data as long as the person is female, and was born in the “19BBY” year.
+
+Note: Everyone will have the edit page, only fill out the form if the person meets these requirements 
+
+At the top of the list write the number of men and women.
+
+We would also like the best practices in JS to be used ;)
+```
