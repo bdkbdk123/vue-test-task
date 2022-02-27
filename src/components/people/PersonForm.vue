@@ -2,7 +2,7 @@
   <form id="person-form">
     <table class="form-table">
       <tbody>
-        <tr v-for="key in formKeys" :key="key" class="person-row">
+        <tr v-for="key in formKeys" :key="key">
           <td>{{ formatName(key) }}</td>
           <td>
             <textarea v-if="Array.isArray(form[key])" v-model="form[key]" />
