@@ -29,7 +29,7 @@ const getColor = (color) => {
 const handleEdit = () => {
   router.push({
     name: "edit",
-    params: { id: 1, ...props.person },
+    params: props.person,
   });
 };
 </script>

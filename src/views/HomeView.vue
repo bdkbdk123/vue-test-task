@@ -28,7 +28,7 @@ const loadingPercentage = computed(
 store.dispatch("people/fetch", {
   minAmount: config.minAmount,
   unwantedChars: config.unwantedChars,
-  allowDuplicates: true,
+  allowDuplicates: config.allowDuplicates,
 });
 </script>
 
